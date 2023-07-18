@@ -14,8 +14,8 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      React homework template
-      <div>
+      React exercices
+      <div className="container">
         <button type="button" onClick={() => setValue(value - 1)}>
           Decrease value by 1
         </button>
