@@ -3,7 +3,8 @@ import { useState } from 'react';
 export const App = () => {
   const [value, setValue] = useState(0);
   return (
-    <div className='container'
+    <div
+      className="container"
       style={{
         height: '100vh',
         display: 'flex',
@@ -15,6 +16,9 @@ export const App = () => {
     >
       React homework template
       <div>
+        <button type="button" onClick={() => setValue(value - 1)}>
+          Decrease value by 1
+        </button>
         {value}
         <button type="button" onClick={() => setValue(value + 1)}>
           Increment value by 1
