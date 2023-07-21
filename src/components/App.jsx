@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Counter } from './buttons/counter';
+import { ChangeValue } from './buttons/changeValue';
 
 
 export const App = () => {
-  const [value, setValue] = useState(0);
-  const [value1, setValue1] = useState(0);
-  const [username, setUsername] = useState('');
-  const [todos, setTodos] = useState([{ text: 'Learn hooks' }]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const [value1] = useState(0);
   useEffect(() => {
     document.title = `You clicked ${value1} times`;
   });
@@ -24,20 +23,9 @@ export const App = () => {
       }}
     >
       React exercices
-      <div className="container">
-        <button type="button" onClick={() => setValue(value + 1)}>
-          Increment value by 1
-        </button>
-
-        {value}
-        <button type="button" onClick={() => setValue(value - 1)}>
-          Decrease value by 1
-        </button>
-      </div>
-      <div>
-        <p>You clicked {value1} times</p>
-        <button onClick={() => setValue1(value1 + 1)}>Click me</button>
-      </div>
+      <ChangeValue />
+      <Counter />
+      
     </div>
   );
 };
